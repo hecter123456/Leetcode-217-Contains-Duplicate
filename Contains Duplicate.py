@@ -16,16 +16,7 @@ class unitest(unittest.TestCase):
 
 class Solution():
     def containsDuplicate(self, nums):
-        dic = {}
-        for i in nums:
-            if i in dic:
-                dic[i] = -1
-            else:
-                dic[i] = 1
-        for key,value in dic.items():
-            if dic[key] == -1:
-                return True
-        return False
+        return len(nums) != len(set(nums))
 
 if __name__ == '__main__':
     unittest.main()
